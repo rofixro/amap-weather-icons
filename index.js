@@ -104,7 +104,7 @@ class AmapWeatherIcons extends HTMLElement {
       svgElement.setAttribute("width", size);
       svgElement.setAttribute("height", size);
       
-      this.shadowRoot.innerHTML = "";
+      this.shadowRoot.innerHTML = "<style>:host {display: inline-block; font-size: 0;}</style>";
       this.shadowRoot.appendChild(svgElement);
     } else {
       throw new Error(`Icon "${icon}" not found`);
