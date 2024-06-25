@@ -70,13 +70,11 @@ const ICON_MAP = {
 };
 
 class AmapWeatherIcons extends HTMLElement {
+  static observedAttributes = ["icon", "size", "color", "predefine"];
+
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-  }
-
-  static get observedAttributes() {
-    return ["icon", "size", "color"];
   }
 
   connectedCallback() {
@@ -92,18 +90,20 @@ class AmapWeatherIcons extends HTMLElement {
   render() {
     const size = this.getAttribute("size") || 24;
     const icon = this.getAttribute("icon") || "未知";
-    const color = this.getAttribute("color") || "#ddd";
+    const color = this.getAttribute("color") || "#027aff";
+    const predefine = JSON.parse(this.getAttribute("predefine")) || {};
     const svgContent = ICON_MAP[icon];
 
     if (svgContent) {
       const parser = new DOMParser();
       const svgDoc = parser.parseFromString(svgContent, "image/svg+xml");
       const svgElement = svgDoc.documentElement;
+      const predefineColor = icon in predefine ? predefine[icon] : color;
 
-      svgElement.setAttribute("fill", color);
       svgElement.setAttribute("width", size);
       svgElement.setAttribute("height", size);
-      
+      svgElement.setAttribute("fill", predefineColor);
+
       this.shadowRoot.innerHTML = "<style>:host {display: inline-block; font-size: 0;}</style>";
       this.shadowRoot.appendChild(svgElement);
     } else {
