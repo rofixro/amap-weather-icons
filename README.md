@@ -43,7 +43,7 @@ import { ref } from "vue";
 const size = ref(50);
 const icon = ref("暴雪");
 const color = ref("#35eb9a");
-const predefine = ref({ "晴": "#fdad38", "热": "#f44031", "阴": "#ababab" })
+const predefine = ref({ "晴": "#fdad38", "热": "#f44031", "阴": "#ababab" });
 </script>
 
 <template>
@@ -61,7 +61,8 @@ function App() {
   const [size] = useState(50);
   const [icon] = useState("暴雪");
   const [color] = useState("#35eb9a");
-  const [predefine] = useState({ "晴": "#fdad38", "热": "#f44031", "阴": "#ababab" })
+  const [predefine] = useState({ "晴": "#fdad38", "热": "#f44031", "阴": "#ababab" });
+
   return (
     <>
       <div style={style}>
@@ -83,7 +84,7 @@ export default App;
   const size = 50;
   const icon = "暴雪";
   const color = "#35eb9a";
-  const predefine = { "晴": "#fdad38", "热": "#f44031", "阴": "#ababab" }
+  const predefine = { "晴": "#fdad38", "热": "#f44031", "阴": "#ababab" };
 </script>
 
 <main>
