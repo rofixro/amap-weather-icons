@@ -1,9 +1,16 @@
 {
   "name": "amap-weather-icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "高德天气现象图标组件",
   "main": "index.js",
-  "keywords": ["高德地图", "天气查询", "图标", "amap", "weather", "icons"],
+  "keywords": [
+    "高德地图",
+    "天气查询",
+    "图标",
+    "amap",
+    "weather",
+    "icons"
+  ],
   "author": "Rofix",
   "license": "MIT"
 }
