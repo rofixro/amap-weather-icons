@@ -91,7 +91,7 @@ class AmapWeatherIcons extends HTMLElement {
     const size = this.getAttribute("size") || 24;
     const icon = this.getAttribute("icon") || "未知";
     const color = this.getAttribute("color") || "#027aff";
-    const predefine = JSON.parse(this.getAttribute("predefine")) || {};
+    const predefine = JSON.parse(JSON.stringify(this.getAttribute("predefine"))) || {};
     const svgContent = ICON_MAP[icon];
 
     if (svgContent) {
