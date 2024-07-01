@@ -26,11 +26,10 @@ npm install amap-weather-icons
       size="50"
       icon="暴雪"
       color="#35eb9a"
-      predefine='{"晴": "#fdad38","热": "#f44031", "阴": "#ababab"}'
+      predefine='{晴: "#fdad38", 热: "#f44031", 阴: "#ababab"}'
     ></amap-weather-icons>
   </body>
 </html>
-
 ```
 
 ### Vue
@@ -43,11 +42,11 @@ import { ref } from "vue";
 const size = ref(50);
 const icon = ref("暴雪");
 const color = ref("#35eb9a");
-const predefine = ref({ "晴": "#fdad38", "热": "#f44031", "阴": "#ababab" });
+const predefine = ref({ 晴: "#fdad38", 热: "#f44031", 阴: "#ababab" });
 </script>
 
 <template>
-  <amap-weather-icons :icon="icon" :size="size" color="color" :predefine="predefine"></amap-weather-icons>
+  <amap-weather-icons :icon="icon" :size="size" :color="color" :predefine="predefine"></amap-weather-icons>
 </template>
 ```
 
@@ -61,13 +60,11 @@ function App() {
   const [size] = useState(50);
   const [icon] = useState("暴雪");
   const [color] = useState("#35eb9a");
-  const [predefine] = useState({ "晴": "#fdad38", "热": "#f44031", "阴": "#ababab" });
+  const [predefine] = useState({ 晴: "#fdad38", 热: "#f44031", 阴: "#ababab" });
 
   return (
     <>
-      <div style={style}>
-        <css-3d-progress size={size} icon={icon} color={color} predefine={predefine}></css-3d-progress>
-      </div>
+      <amap-weather-icons size={size} icon={icon} color={color} predefine={predefine}></amap-weather-icons>
     </>
   );
 }
@@ -84,7 +81,7 @@ export default App;
   const size = 50;
   const icon = "暴雪";
   const color = "#35eb9a";
-  const predefine = { "晴": "#fdad38", "热": "#f44031", "阴": "#ababab" };
+  const predefine = { 晴: "#fdad38", 热: "#f44031", 阴: "#ababab" };
 </script>
 
 <main>
