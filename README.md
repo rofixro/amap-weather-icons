@@ -19,7 +19,7 @@ npm install amap-weather-icons
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>amap-weather-icons</title>
-    <script src="https://unpkg.com/amap-weather-icons@0.0.4/index.js"></script>
+    <script src="https://unpkg.com/amap-weather-icons@0.0.4/output/index.js"></script>
   </head>
   <body>
     <amap-weather-icons size="50" icon="暴雪"></amap-weather-icons>
