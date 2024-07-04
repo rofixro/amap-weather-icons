@@ -1,4 +1,5 @@
 import image from "@rollup/plugin-image";
+import terser from "@rollup/plugin-terser";
 
 export default {
   input: "src/index.js",
@@ -7,5 +8,5 @@ export default {
     format: "es",
     inlineDynamicImports: true,
   },
-  plugins: [image()],
+  plugins: [image(), terser()],
 };
