@@ -2,7 +2,11 @@
   "name": "amap-weather-icons",
   "version": "0.0.3",
   "description": "高德天气现象图标组件",
-  "main": "index.js",
+  "main": "output/index.js",
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "type": "module",
   "keywords": [
     "高德地图",
     "天气查询",
@@ -12,5 +16,9 @@
     "icons"
   ],
   "author": "Rofix",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-image": "^3.0.3",
+    "rollup": "^4.18.0"
+  }
 }
