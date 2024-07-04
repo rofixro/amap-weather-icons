@@ -1,5 +1,9 @@
 # amap-weather-icons
 
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+## Background
+
 由于高德地图 [天气查询 API](https://lbs.amap.com/api/webservice/guide/api/weatherinfo/#t1) 并没有返回相应的 [天气现象](https://lbs.amap.com/api/webservice/guide/tools/weather-code) 图标，故编写此库方便大家使用。本项目采用 Web Components 编写，支持主流的前端技术框架，感谢 [林间风雨](https://download.csdn.net/download/jack_rose_me/33450342) 提供的图片资源。
 
 ## Install
@@ -19,12 +23,31 @@ npm install amap-weather-icons
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>amap-weather-icons</title>
-    <script src="https://unpkg.com/amap-weather-icons@0.0.5/output/index.js"></script>
+    <script src="https://unpkg.com/amap-weather-icons@0.0.6/output/index.js"></script>
   </head>
   <body>
     <amap-weather-icons size="50" icon="暴雪"></amap-weather-icons>
   </body>
 </html>
+```
+
+### Vite
+
+```javascript
+// vite.config.js
+import vue from '@vitejs/plugin-vue'
+
+export default {
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.includes('amap-weather-icons')
+        }
+      }
+    })
+  ]
+}
 ```
 
 ### Vue
